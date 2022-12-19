@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import CustomOrigin from './components/CustomOrigin'
+import {
+  PrimaryButton,
+  SecondaryButton,
+  TertiaryButton,
+} from "./components/Button/ButtonStyled";
+import { GlobalStyle } from "./components/utils";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-     <CustomOrigin/>
+    <div>
+      <PrimaryButton>Primary</PrimaryButton>
+      <SecondaryButton>Secondary</SecondaryButton>
+      <TertiaryButton>Tertiary</TertiaryButton>
+      <GlobalStyle />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
