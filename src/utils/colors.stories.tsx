@@ -1,4 +1,5 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { Meta } from "@storybook/react";
 import {
   ErrorColors,
   InfoColors,
@@ -10,7 +11,6 @@ import {
   TertiaryColors,
   VariantNeutral,
   WarningColors,
-  blue,
 } from "./colors";
 
 export default {
@@ -42,7 +42,7 @@ export default {
       },
     },
   },
-};
+} as Meta<typeof ColorPalette>;
 
 export const ColorPaletteStory = () => {
   return (
