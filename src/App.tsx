@@ -1,13 +1,9 @@
 import { useState } from "react";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from "./components/Button/ButtonStyled";
-import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
 import { ThemeProvider } from "styled-components";
+import Button from "./components/Button/Button";
 import SignUpModal from "./components/Modal/Modal";
- 
+import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
+
 function App() {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +14,7 @@ function App() {
         onClick={() => setUseDarkTheme(!useDarkTheme)}
       >
         {useDarkTheme ? "Light Theme" : "Dark Theme"}
-      </button>{" "}
+      </button>
       <button
         style={{ margin: " 0 16px 24px", padding: "8px", background: "none" }}
         onClick={() => setShowModal(!showModal)}
@@ -38,15 +34,15 @@ function App() {
         }}
       >
         <SignUpModal showModal={showModal} setShowModal={setShowModal} />
-        <PrimaryButton small error>
+        <Button small={true} error={true}>
           Hello World
-        </PrimaryButton>
-        <SecondaryButton large warning secondaryButtonWarning>
+        </Button>
+        <Button large={true} warning={true} secondaryButtonWarning={true}>
           Good Bye World
-        </SecondaryButton>
-        <TertiaryButton success error>
+        </Button>
+        <Button success={true} error={true}>
           Hey World
-        </TertiaryButton>
+        </Button>
       </div>
       <GlobalStyle />
     </ThemeProvider>

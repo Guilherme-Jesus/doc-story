@@ -1,6 +1,5 @@
 import { animated, config, useSpring } from "@react-spring/web";
 import { Illustrations } from "../../assets/illustations";
-import { PrimaryButton } from "../Button/ButtonStyled";
 import { CloseIcon } from "../icons/CloseIcon";
 import {
   CloseModalButton,
@@ -8,6 +7,7 @@ import {
   SignUpHeader,
   SignUpText,
 } from "./ModalStyled";
+import Button from "../Button/Button";
 
 interface ModalProps {
   showModal: boolean;
@@ -31,7 +31,7 @@ export default function SignUpModal({ showModal, setShowModal }: ModalProps) {
         />
         <SignUpHeader>Sign Up</SignUpHeader>
         <SignUpText> Sign up to get access! </SignUpText>
-        <PrimaryButton>Sign Up</PrimaryButton>
+        <Button>Sign Up</Button>
         <CloseModalButton
           aria-label="Close modal"
           onClick={() => console.log("You closed the modal!")}
