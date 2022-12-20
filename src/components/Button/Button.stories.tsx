@@ -26,13 +26,17 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  medium: true,
   children: "Button",
 };
 
 export const Large = Template.bind({});
 Large.args = {
   large: true,
+  children: "Button",
+};
+export const Medium = Template.bind({});
+Medium.args = {
+  medium: true,
   children: "Button",
 };
 
