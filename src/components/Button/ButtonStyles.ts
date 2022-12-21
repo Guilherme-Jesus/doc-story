@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { defaultTheme, typeScale } from "../../utils";
-
 export const StyledButton = styled.button<{
   small?: boolean;
   large?: boolean;
