@@ -8,6 +8,7 @@ interface ContainerProps {
   hoverBgColor: string;
   hoverColor: string;
 }
+
 interface IVariantProps {
   primary: {
     bgColor: string;
@@ -68,18 +69,38 @@ export const variantToColor: IVariantProps = {
   },
 };
 
-export const Container = styled.button<ContainerProps>`
+export const ButtonLarge = styled.button<ContainerProps>`
   background: ${(props) => props.bgColor};
   color: ${(props) => props.color};
-  border: 1px solid ${(props) => props.bColor};
+  padding: 16px;
+  width: 360px;
+  height: 64px;
+  left: 20px;
+  top: 20px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
-  padding: 8px 16px;
   border: none;
+`;
+
+export const ButtonMedium = styled.button<ContainerProps>`
+  background: ${(props) => props.bgColor};
+  color: ${(props) => props.color};
   height: 48px;
   width: 264px;
-  &:hover {
-    background: ${(props) => props.hoverBgColor};
-    color: ${(props) => props.hoverColor};
-  }
+  left: 20px;
+  top: 108px;
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
+`;
+
+export const ButtonSmall = styled.button<ContainerProps>`
+  background: ${(props) => props.bgColor};
+  color: ${(props) => props.color};
+  padding: 16px;
+  width: 168px;
+  height: fit-content;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
 `;

@@ -20,7 +20,9 @@ const AppColors = {
   errorColor: ErrorColors[500],
   successColor: SuccessColors[500],
   warningColor: WarningColors[500],
-  inforColor: InfoColors[400],
+  infoColor: InfoColors[400],
 };
+
+// const AppTypography = {
 
 export { AppColors };
