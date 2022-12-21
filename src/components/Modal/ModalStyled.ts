@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typeScale } from "../../utils";
+import { typeScale } from "../styles/utils";
 
 export const ModalWrapper = styled.div`
   width: 800px;

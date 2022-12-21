@@ -1,47 +1,34 @@
-import { ComponentStory, Meta } from "@storybook/react";
-import Button from "./Button";
+import { ComponentMeta, Story } from "@storybook/react";
+import Button, { ButtonProps } from "./Button";
 
 export default {
   title: "Components/Button",
   component: Button,
-} as Meta;
+  argTypes: {
+    variant: {
+      control: {
+        type: "select",
+        options: ["primary", "secondary", "outline"],
+      },
+    },
+  },
+} as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export const Primary: Story<ButtonProps> = (args) => (
+  <Button {...args}>Primary Button</Button>
+);
 
-export const Primary = Template.bind({});
+export const Secondary: Story<ButtonProps> = (args) => (
+  <Button {...args}>Secondary Button</Button>
+);
 
-Primary.args = {
-  primaryButtonSuccess: true,
-  primaryButtonError: false,
-  primaryButtonWarning: false,
-  secondaryButtonSuccess: false,
-  secondaryButtonError: false,
-  secondaryButtonWarning: false,
-  success: false,
-  error: false,
-  warning: false,
-  disabled: false,
-  children: "Button",
-};
-
-export const Secondary = Template.bind({});
 Secondary.args = {
-  children: "Button",
+  variant: "secondary",
 };
+export const Outline: Story<ButtonProps> = (args) => (
+  <Button {...args}>Outline Button</Button>
+);
 
-export const Large = Template.bind({});
-Large.args = {
-  large: true,
-  children: "Button",
-};
-export const Medium = Template.bind({});
-Medium.args = {
-  medium: true,
-  children: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  small: true,
-  children: "Button",
+Outline.args = {
+  variant: "outline",
 };

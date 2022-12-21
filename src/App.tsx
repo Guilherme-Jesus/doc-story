@@ -2,7 +2,11 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Button from "./components/Button/Button";
 import SignUpModal from "./components/Modal/Modal";
-import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
+import {
+  GlobalStyle,
+  darkTheme,
+  defaultTheme,
+} from "./components/styles/utils";
 
 function App() {
   const [useDarkTheme, setUseDarkTheme] = useState(false);

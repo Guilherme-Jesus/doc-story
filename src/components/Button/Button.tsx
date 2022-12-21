@@ -1,27 +1,24 @@
 import React from "react";
-import { StyledButton } from "./ButtonStyles";
+import { Container, variantToColor } from "./styles";
 
-interface ButtonProps {
-  small?: boolean;
-  large?: boolean;
-  medium?: boolean;
-  warning?: boolean;
-  primaryButtonWarning?: boolean;
-  secondaryButtonWarning?: boolean;
-  error?: boolean;
-  primaryButtonError?: boolean;
-  secondaryButtonError?: boolean;
-  success?: boolean;
-  primaryButtonSuccess?: boolean;
-  secondaryButtonSuccess?: boolean;
-  disabled?: boolean;
-  children: React.ReactNode;
+export interface ButtonProps {
+  variant?: "primary" | "secondary" | "outline";
+  children: string;
 }
 
-export default function Button({ ...props }: ButtonProps) {
+function Button({ variant = "primary", children }: ButtonProps) {
+  const { bgColor, hover, color, borderColor } = variantToColor[variant];
   return (
-    <React.Fragment>
-      <StyledButton {...props}>{props.children}</StyledButton>
-    </React.Fragment>
+    <Container
+      bgColor={bgColor}
+      bColor={borderColor}
+      color={color}
+      hoverBgColor={hover.bgColor}
+      hoverColor={hover.color}
+    >
+      {children}
+    </Container>
   );
 }
+
+export default Button;
