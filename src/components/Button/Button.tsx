@@ -1,47 +1,32 @@
-import {
-  ButtonLarge,
-  ButtonMedium,
-  ButtonSmall,
-  variantToColor,
-} from "./styles";
+import { ContainerButton, variantToColor, variantToSize } from "./styles";
 
 export interface ButtonProps {
   variant?: "primary" | "secondary" | "outline";
-  size?: "small" | "medium" | "large" | "xlarge" | "xxlarge";
+  size?: "primaryLarge" | "primaryMedium" | "primarySmall";
   children: string;
 }
 
-function Button({ variant = "primary", children }: ButtonProps) {
+function Button({
+  variant = "primary",
+  size = "primaryLarge",
+  children,
+}: ButtonProps) {
   const { bgColor, hover, color, borderColor } = variantToColor[variant];
+  const { height, width } = variantToSize[size];
+
   return (
     <>
-      <ButtonLarge
+      <ContainerButton
         bgColor={bgColor}
         bColor={borderColor}
         color={color}
         hoverBgColor={hover.bgColor}
         hoverColor={hover.color}
+        height={height}
+        width={width}
       >
         {children}
-      </ButtonLarge>
-      <ButtonMedium
-        bgColor={bgColor}
-        bColor={borderColor}
-        color={color}
-        hoverBgColor={hover.bgColor}
-        hoverColor={hover.color}
-      >
-        {children}
-      </ButtonMedium>
-      <ButtonSmall
-        bgColor={bgColor}
-        bColor={borderColor}
-        color={color}
-        hoverBgColor={hover.bgColor}
-        hoverColor={hover.color}
-      >
-        {children}
-      </ButtonSmall>
+      </ContainerButton>
     </>
   );
 }

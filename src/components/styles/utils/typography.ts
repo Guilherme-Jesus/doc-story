@@ -48,6 +48,58 @@ export const lineHeightTypography = {
   font3Xl: "48px",
   font4Xl: "56px",
 };
+/// Size
+
+export const size = {
+  primaryLarge: {
+    width: "360px",
+    height: "64px",
+  },
+  primaryMedium: {
+    width: "264px",
+    height: "48px",
+  },
+  primarySmall: {
+    width: "168px",
+    height: "fit-content",
+  },
+  secondaryLarge: {
+    width: "360px",
+    height: "64px",
+  },
+  secondaryMedium: {
+    width: "264px",
+    height: "48px",
+  },
+  secondarySmall: {
+    width: "168px",
+    height: "fit-content",
+  },
+  tertiaryLarge: {
+    width: "360px",
+    height: "64px",
+  },
+  tertiaryMedium: {
+    width: "264px",
+    height: "48px",
+  },
+  tertiarySmall: {
+    width: "168px",
+    height: "fit-content",
+  },
+  outlinedLarge: {
+    width: "360px",
+    height: "64px",
+  },
+  outlinedMedium: {
+    width: "264px",
+    height: "48px",
+  },
+  outlinedSmall: {
+    width: "168px",
+    height: "fit-content",
+  },
+};
 
 /// Title
 

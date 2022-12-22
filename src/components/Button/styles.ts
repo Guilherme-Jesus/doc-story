@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AppColors } from "../styles/utils";
+import { AppColors, size } from "../styles/utils";
 
 interface ContainerProps {
   bgColor: string;
@@ -7,6 +7,8 @@ interface ContainerProps {
   color: string;
   hoverBgColor: string;
   hoverColor: string;
+  width: string;
+  height: string;
 }
 
 interface IVariantProps {
@@ -39,6 +41,108 @@ interface IVariantProps {
   };
 }
 
+interface ISizeProps {
+  primaryLarge: {
+    width: string;
+    height: string;
+  };
+  primaryMedium: {
+    width: string;
+    height: string;
+  };
+  primarySmall: {
+    width: string;
+    height: string;
+  };
+  secondaryLarge: {
+    width: string;
+    height: string;
+  };
+  secondaryMedium: {
+    width: string;
+    height: string;
+  };
+  secondarySmall: {
+    width: string;
+    height: string;
+  };
+  tertiaryLarge: {
+    width: string;
+    height: string;
+  };
+  tertiaryMedium: {
+    width: string;
+    height: string;
+  };
+  tertiarySmall: {
+    width: string;
+    height: string;
+  };
+  outlinedLarge: {
+    width: string;
+    height: string;
+  };
+  outlinedMedium: {
+    width: string;
+    height: string;
+  };
+  outlinedSmall: {
+    width: string;
+    height: string;
+  };
+}
+
+export const variantToSize: ISizeProps = {
+  primaryLarge: {
+    width: size.primaryLarge.width,
+    height: size.primaryLarge.height,
+  },
+  primaryMedium: {
+    width: size.primaryMedium.width,
+    height: size.primaryMedium.height,
+  },
+  primarySmall: {
+    width: size.primarySmall.width,
+    height: size.primarySmall.height,
+  },
+  secondaryLarge: {
+    width: size.secondaryLarge.width,
+    height: size.secondaryLarge.height,
+  },
+  secondaryMedium: {
+    width: size.secondaryMedium.width,
+    height: size.secondaryMedium.height,
+  },
+  secondarySmall: {
+    width: size.secondarySmall.width,
+    height: size.secondarySmall.height,
+  },
+  tertiaryLarge: {
+    width: size.tertiaryLarge.width,
+    height: size.tertiaryLarge.height,
+  },
+  tertiaryMedium: {
+    width: size.tertiaryMedium.width,
+    height: size.tertiaryMedium.height,
+  },
+  tertiarySmall: {
+    width: size.tertiarySmall.width,
+    height: size.tertiarySmall.height,
+  },
+  outlinedLarge: {
+    width: size.outlinedLarge.width,
+    height: size.outlinedLarge.height,
+  },
+  outlinedMedium: {
+    width: size.outlinedMedium.width,
+    height: size.outlinedMedium.height,
+  },
+  outlinedSmall: {
+    width: size.outlinedSmall.width,
+    height: size.outlinedSmall.height,
+  },
+};
+
 export const variantToColor: IVariantProps = {
   primary: {
     bgColor: AppColors.primaryColor,
@@ -69,37 +173,14 @@ export const variantToColor: IVariantProps = {
   },
 };
 
-export const ButtonLarge = styled.button<ContainerProps>`
+export const ContainerButton = styled.button<ContainerProps>`
   background: ${(props) => props.bgColor};
   color: ${(props) => props.color};
   padding: 16px;
-  width: 360px;
-  height: 64px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   left: 20px;
   top: 20px;
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  border: none;
-`;
-
-export const ButtonMedium = styled.button<ContainerProps>`
-  background: ${(props) => props.bgColor};
-  color: ${(props) => props.color};
-  height: 48px;
-  width: 264px;
-  left: 20px;
-  top: 108px;
-  border-radius: 8px;
-  padding: 16px;
-  border: none;
-`;
-
-export const ButtonSmall = styled.button<ContainerProps>`
-  background: ${(props) => props.bgColor};
-  color: ${(props) => props.color};
-  padding: 16px;
-  width: 168px;
-  height: fit-content;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   border: none;

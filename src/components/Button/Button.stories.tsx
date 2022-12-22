@@ -14,21 +14,21 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
-export const Primary: Story<ButtonProps> = (args) => (
-  <Button {...args}>Primary Button</Button>
+export const Large: Story<ButtonProps> = (args) => (
+  <Button {...args}>Texto</Button>
 );
-
-export const Secondary: Story<ButtonProps> = (args) => (
-  <Button {...args}>Secondary Button</Button>
-);
-
-Secondary.args = {
-  variant: "secondary",
+Large.args = {
+  size: "primaryLarge",
 };
-export const Outline: Story<ButtonProps> = (args) => (
-  <Button {...args}>Outline Button</Button>
+export const Medium: Story<ButtonProps> = (args) => (
+  <Button {...args}>Texto</Button>
 );
-
-Outline.args = {
-  variant: "outline",
+Medium.args = {
+  size: "primaryMedium",
+};
+export const Small: Story<ButtonProps> = (args) => (
+  <Button {...args}>Texto</Button>
+);
+Small.args = {
+  size: "primarySmall",
 };
