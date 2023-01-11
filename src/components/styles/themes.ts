@@ -1,3 +1,4 @@
+import { VariantNeutral } from "./utils/colors";
 import {
   ErrorColors,
   InfoColors,
@@ -12,7 +13,7 @@ import {
 
 const AppColors = {
   neutralColor: Neutral[0],
-  neutralColorVariant: Neutral[500],
+  neutralColorVariant: Neutral[1000],
   primaryColor: PrimaryColors[500],
   secondaryColor: SecondaryColors[200],
   secondaryColorVariant: SecondaryVariantColors[200],

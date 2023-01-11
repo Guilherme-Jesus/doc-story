@@ -19,16 +19,19 @@ export const Large: Story<ButtonProps> = (args) => (
 );
 Large.args = {
   size: "primaryLarge",
+  variant: "primary",
 };
 export const Medium: Story<ButtonProps> = (args) => (
   <Button {...args}>Texto</Button>
 );
 Medium.args = {
   size: "primaryMedium",
+  variant: "primary",
 };
 export const Small: Story<ButtonProps> = (args) => (
   <Button {...args}>Texto</Button>
 );
 Small.args = {
   size: "primarySmall",
+  variant: "primary",
 };

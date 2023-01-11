@@ -184,4 +184,7 @@ export const ContainerButton = styled.button<ContainerProps>`
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   border: none;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
 `;
